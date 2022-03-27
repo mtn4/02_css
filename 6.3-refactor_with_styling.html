@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@450"
+    />
+    <title>6.3-refactor_with_styling</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .card {
+        margin: auto;
+        width: 500px;
+        height: 800px;
+        text-align: center;
+        box-shadow: 0 5px 5px #888888;
+        background-color: antiquewhite;
+      }
+      .head {
+        border: 1px solid #ccc;
+        background: #f4f4f4;
+        color: blue;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .desc {
+        border: 1px solid #ccc;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .diff {
+        color: blue;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div id="name" class="head"><h1>John Doe</h1></div>
+      <div id="job" class="head"><h3>Programmer</h3></div>
+
+      <img
+        src="https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg"
+        width="300"
+        alt="Image"
+      />
+      <div id="about" class="desc">
+        <h4>
+          Lorem ipsum dolor
+          <span class="diff">amet consectetur</span> adipisicing elit. Obcaecati
+          aperiam doloribus eligendi nihil earum sint, dolorum exercitationem
+          minima cumque et maxime nisi quod. Ut, perferendis?
+        </h4>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <h4>Follow me</h4>
+      <ul>
+        <li><a href="http://facebook.com">Facebook</a></li>
+        <li><a href="http://twitter.com">Twitter</a></li>
+        <li><a href="http://instagram.com">Instagram</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
