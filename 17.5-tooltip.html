@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17.5-tooltip</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .tooltip {
+        position: relative;
+        color: blue;
+        border-bottom: 1px dashed #000;
+      }
+      .tooltip:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        margin-left: 15px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        display: none;
+      }
+      .tooltip:hover:before {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ab
+      asperiores aspernatur sed quidem architecto illo quasi magnam quos?
+      Officiis eaque qui eveniet ullam vero magni id animi natus, repudiandae
+      sed inventore totam quaerat placeat, quo harum incidunt, delectus nesciunt
+      voluptas recusandae iure quod. At ipsam nulla quidem qui possimus
+      praesentium
+      <span data-text="Thanks for hovering! I'm a tooltip" class="tooltip"
+        >quam</span
+      >
+      magnam officiis neque aliquid soluta ipsa nam, perferendis repellendus
+      consequuntur, laboriosam laudantium. Quidem, esse harum culpa dignissimos
+      vero sed facilis eaque dolorem rem repudiandae itaque a autem voluptates
+      velit eveniet sequi aperiam quod laborum ipsa provident officiis quisquam
+      suscipit. Labore sequi, doloribus explicabo commodi repellendus, pariatur
+      reprehenderit delectus ut amet vitae, fuga totam eum error et consectetur
+      officia! Commodi architecto hic sed obcaecati harum error suscipit cumque
+      esse deleniti adipisci quaerat quasi nesciunt consequuntur perferendis
+      voluptas vel laborum consectetur doloribus culpa ea voluptates iusto,
+      alias omnis exercitationem! Corrupti error quis, quia ut
+      <span data-text="Thanks for hovering! I'm a tooltip" class="tooltip"
+        >veniam</span
+      >
+      esse ad earum dolor reiciendis architecto excepturi alias consequuntur
+      quod labore rerum, maiores sapiente debitis. Obcaecati architecto natus
+      debitis vero. Eveniet illum qui delectus commodi fugiat assumenda soluta
+      sunt modi possimus quos eligendi fuga, alias itaque recusandae quis eaque
+      tenetur pariatur officiis? Soluta similique quod adipisci dicta omnis sunt
+      explicabo eligendi et accusamus! Harum minus obcaecati error ipsum
+      quibusdam dolores? Sequi perspiciatis laudantium minus quasi, odit sint?
+      Blanditiis odit unde dolores neque saepe sapiente, veritatis quaerat sed
+      corrupti tempore? Optio consequuntur quaerat ad ipsam minima sint quae
+      saepe culpa quidem totam ab eos unde provident, odio at maxime. Culpa ex,
+      quae laborum provident quod accusantium!
+    </p>
+  </body>
+</html>

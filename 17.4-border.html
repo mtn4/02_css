@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17.4-border</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        font-family: "Open Sans", sans-serif;
+        text-align: left;
+        width: 150px;
+        margin: auto;
+        line-height: 2;
+      }
+
+      .corner-border,
+      .bottom-corner {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      /* vertical line */
+      .corner-border::after {
+        content: "";
+        position: absolute;
+        background-color: pink;
+        width: 3px;
+        height: 60%;
+        top: 0;
+        left: -15px;
+      }
+
+      /* horizontal line */
+      .corner-border::before {
+        content: "";
+        position: absolute;
+        background-color: pink;
+        width: 20%;
+        height: 3px;
+        top: 0;
+        left: -12px;
+      }
+
+      /* vertical line */
+      .bottom-corner::after {
+        content: "";
+        position: absolute;
+        background-color: #85c1e9;
+        width: 3px;
+        height: 50%;
+        bottom: 0;
+        right: 45px;
+      }
+      /* horizontal line */
+      .bottom-corner::before {
+        content: "";
+        position: absolute;
+        background-color: #85c1e9;
+        width: 20%;
+        height: 3px;
+        bottom: 0;
+        right: 45px;
+      }
+      /* #box {
+        width: 400px;
+        height: 200px;
+        position: relative;
+        background-color: black;
+        color: white;
+      }
+      #box h3 {
+        text-align: center;
+        padding: 89px 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <div id="box"><h3>Cool Border</h3></div> -->
+
+    <h2 class="corner-border">Borders</h2>
+
+    <h2 class="bottom-corner">Borders</h2>
+  </body>
+</html>
