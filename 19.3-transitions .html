@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.3-transitions</title>
+    <style>
+      #translatey {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        font-size: 18px;
+        padding: 15px 30px;
+        transition: transform 1s ease-in;
+      }
+      #translatey:hover {
+        background: yellow;
+        transform: rotate(360deg);
+        /* transition: all 0.3s ease-in-out 0s; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="translatey" class="btn">TranslateY</button>
+    </header>
+  </body>
+</html>
