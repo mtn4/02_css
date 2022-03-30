@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.5-spinners</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      @keyframes spinin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .blue {
+        margin: 20px;
+        animation: spinin 1s infinite linear;
+
+        height: 100px;
+        width: 100px;
+        border-top: 3px solid rgb(65, 178, 206);
+        border-left: 3px solid #444;
+        border-right: 3px solid #444;
+        border-bottom: 3px solid #444;
+        border-radius: 50%;
+      }
+      .blue2 {
+        margin: 20px;
+        animation: spinin 1s infinite linear;
+
+        height: 100px;
+        width: 100px;
+        border-top: 3px solid rgb(65, 178, 206);
+
+        border-radius: 50%;
+      }
+
+      /*  */
+      /*  */
+      /*  */
+      /*  */
+      /*  */
+      @keyframes col {
+        0% {
+          background-color: #555;
+        }
+        50% {
+          background-color: aqua;
+        }
+      }
+      .balles {
+        margin: 10px;
+      }
+
+      .ball {
+        height: 10px;
+        width: 10px;
+        background-color: #555;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 5px;
+      }
+      .one {
+        animation: col 0.9s infinite linear;
+      }
+      .two {
+        animation: col 0.9s infinite linear;
+        animation-delay: 0.3s;
+      }
+      .three {
+        animation: col 0.9s infinite linear;
+        animation-delay: 0.6s;
+      }
+      /*  */
+      /*  */
+      /*  */
+      /*  */
+      @keyframes jump {
+        0% {
+          transform: translateY(0%);
+        }
+        30% {
+          transform: translateY(-50%);
+        }
+      }
+      .j {
+        background-color: aqua;
+      }
+      .onej {
+        animation: jump 1s infinite linear;
+      }
+      .twoj {
+        animation: jump 1s infinite linear;
+        animation-delay: 0.3s;
+      }
+      .threej {
+        animation: jump 1s infinite linear;
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blue"></div>
+
+    <div class="blue2"></div>
+
+    <div class="balles">
+      <div class="ball one"></div>
+      <div class="ball two"></div>
+      <div class="ball three"></div>
+    </div>
+    <div class="balles">
+      <div class="ball j onej"></div>
+      <div class="ball j twoj"></div>
+      <div class="ball j threej"></div>
+    </div>
+  </body>
+</html>
