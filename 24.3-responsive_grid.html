@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24.3-responsive_grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .grid {
+        display: grid;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-areas:
+          "red red red red red red red"
+          "blue blue green green green purple purple"
+          "blue blue green green green purple purple"
+          "yellow yellow yellow yellow yellow yellow yellow";
+        width: 960px;
+        grid-gap: 30px;
+        margin: auto;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          display: grid;
+          /* grid-template-columns: repeat(4, 1fr); */
+          grid-template-areas:
+            "red red red red red red"
+            "blue blue green green green green"
+            "blue blue green green green green"
+            "purple purple purple purple purple purple"
+            "yellow yellow yellow yellow yellow yellow";
+          width: 650px;
+          grid-gap: 10px;
+          margin: auto;
+        }
+        h1 {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 500px) {
+        .grid {
+          display: grid;
+          /* grid-template-columns: repeat(4, 1fr); */
+          grid-template-areas:
+            "red red red"
+            "blue blue blue"
+            "green green green"
+            "purple purple purple"
+            "yellow yellow yellow";
+          width: 420px;
+          grid-gap: 5px;
+          margin: auto;
+        }
+        h1 {
+          font-size: 14px;
+        }
+      }
+      h1 {
+        color: white;
+      }
+      .item {
+        padding: 20px;
+        border-radius: 20px;
+      }
+      #red {
+        background-color: red;
+        grid-area: red;
+        /* grid-column: 1 / span 4; */
+      }
+      #blue {
+        background-color: blue;
+        grid-area: blue;
+        /* grid-column: 1 / span 2;
+        grid-row: 2 / span 3; */
+      }
+      #green {
+        background-color: green;
+        grid-area: green;
+        /* grid-column: 3 / span 2; */
+      }
+      #purple {
+        background-color: purple;
+        grid-area: purple;
+        /* grid-column: 3 / span 1; */
+      }
+      #yellow {
+        background-color: yellow;
+        grid-area: yellow;
+        /* grid-column: 4 / span 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item" id="red"><h1>Header</h1></div>
+      <div class="item" id="blue"><h1>Sidebar</h1></div>
+      <div class="item" id="green">
+        <h1>Content</h1>
+        <h1>
+          More content than we had before so this column is now quite tall
+        </h1>
+      </div>
+      <div class="item" id="purple"><h1>Sidebar 2</h1></div>
+      <div class="item" id="yellow"><h1>Footer</h1></div>
+    </div>
+  </body>
+</html>
